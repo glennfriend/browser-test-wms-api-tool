@@ -1,4 +1,6 @@
 
+var html = 'hello world <b>every body</b> go to <a href="https://google.com/">google</a>.';
+
 var data = [
     {
         "api": "/crmAms/appointmentCommentAjax/add",
@@ -9,7 +11,7 @@ var data = [
         },
         "data": {
             'appointment_id': '1',
-            'content': "hello A " + getRandomInt(1, 9)
+            'content': html + " " + getRandomInt(1, 9)
         }
     },
     {
@@ -21,7 +23,7 @@ var data = [
         },
         "data": {
             'appointment_id': '1',
-            'content': "hello B " + getRandomInt(10, 100)
+            'content': "hello " + getRandomInt(10, 100)
         }
     }
 ]
