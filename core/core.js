@@ -3,12 +3,20 @@
 // ================================================================================
 
 var isCaptureImage = false;
+var isDebug = false;
 
-// log level: "info", "debug"
-var casper = require('casper').create({
-    logLevel: "info",
-    verbose: false
-});
+if (isDebug) {
+    var casper = require('casper').create({
+        logLevel: "debug",
+        verbose: true
+    });
+}
+else {
+    var casper = require('casper').create({
+        logLevel: "info",
+        verbose: false
+    });
+}
 
 
 // ================================================================================
@@ -49,7 +57,7 @@ casper.then(captureImageFunc('w2-login.png'));
 //  script
 // ================================================================================
 var script = casper.cli.args[0];
-var items = require("../" + script);
+var items = require(getProjectPath('/src') + '/' + script);
 for (var i = 0; i < items.length; i++) {
     var json = items[i];
     // utils.dump(json);

@@ -39,7 +39,8 @@ vi config/config.json
 
 #### try
 ```sh
-casperjs --ignore-ssl-errors=true core/core.js test.js
+cd src
+casperjs --ignore-ssl-errors=true ../core/core.js test.js 
 ```
 
 #### casperjs 參數
