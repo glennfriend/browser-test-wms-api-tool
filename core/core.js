@@ -2,8 +2,10 @@
 //  setting
 // ================================================================================
 
-var isCaptureImage = false;
 var isDebug = false;
+var isCaptureImage = false;
+var isSaveCookie = true;
+
 
 if (isDebug) {
     var casper = require('casper').create({
@@ -111,7 +113,9 @@ casper.on('step.error', function(err) {
 // ================================================================================
 casper.run(function() {
 
-    // saveCookie();
+    if (isSaveCookie) {
+        saveCookie();
+    }
 
     this
         .echo('Done')
