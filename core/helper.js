@@ -1,6 +1,7 @@
 
 var fs = require('fs');
 
+
 /**
  *
  */
@@ -66,9 +67,9 @@ function dumpObjectKeys(object)
 /**
  *
  */
-function getTemp(path)
+function getTemp(tempFile)
 {
-    return getProjectPath('/var' + path);
+    return getProjectPath('/var' + tempFile);
 }
 
 /**
@@ -83,3 +84,31 @@ function getConfig()
     var text = fs.read(configPath);
     return JSON.parse(text);
 }
+
+/**
+ *
+ */
+function saveCookie()
+{
+    var file = getProjectPath('/var/cookie.txt');
+    var cookies = JSON.stringify(phantom.cookies);
+    fs.write(file, cookies, 755);
+}
+
+/**
+ *  @return boolean
+ */
+function loadCookie()
+{
+    var file = getProjectPath('/var/cookie.txt');
+
+    if (fs.exists(file)) {
+        var data = fs.read(file);
+        //phantom.cookies = JSON.parse(data);
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+

@@ -110,6 +110,9 @@ casper.on('step.error', function(err) {
 //
 // ================================================================================
 casper.run(function() {
+
+    // saveCookie();
+
     this
         .echo('Done')
         .exit();

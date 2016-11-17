@@ -8,11 +8,11 @@ phantom.injectJs(getProjectPath('/core/helper.js'));
 /**
  *
  */
-function getProjectPath(path)
+function getProjectPath(extendPath)
 {
     var basePath = ROOT;
-    if (path) {
-        return basePath + path;
+    if (extendPath) {
+        return basePath + extendPath;
     }
     return basePath;
 }
