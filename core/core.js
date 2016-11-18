@@ -68,7 +68,10 @@ for (var i = 0; i < items.length; i++) {
         console.log('Error: script data index = ' + i);
         exit();
     }
-    
+    if (!json.description) {
+        json.description = "";
+    }
+
     casper.then(createApiCallFunc(json));
     casper.then(createApiResponseFunc());
 }
@@ -136,6 +139,10 @@ function createApiCallFunc(json)
         var url = getApi(json.api);
         var requestString = JSON.stringify(json.data);
 
+        if (json.description) {
+            console.log("--> " + json.description);
+        }
+
         // requestString = '';
         // console.log('-> ' + url);
         // console.log(requestString);
@@ -178,6 +185,7 @@ function createApiResponseFunc()
         else {
             utils.dump(json);
         }
+        console.log("");
     };
 }
 
