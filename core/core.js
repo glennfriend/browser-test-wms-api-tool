@@ -4,7 +4,7 @@
 
 var isDebug = false;
 var isCaptureImage = false;
-var isSaveCookie = true;
+var isSaveCookie = false;
 
 
 if (isDebug) {
@@ -175,7 +175,16 @@ function createApiResponseFunc()
 
         // 如果你能確定回傳的是 ajax json
         var resultText = this.getPlainText();
-        var json = JSON.parse(resultText);
+        try {
+            var json = JSON.parse(resultText);
+        }
+        catch (parseError) {
+            console.log("---- response json parse error (display text) ----");
+            console.log(resultText);
+            this.exit();
+            return;
+        }
+
         if (json.error) {
             console.log("[error]");
             utils.dump(json);
