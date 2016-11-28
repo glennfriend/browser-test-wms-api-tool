@@ -36,8 +36,8 @@ var data = [
             "appointment_comment": {
                 "content": "comment " + getRandomInt(1, 100),
             },
-            "attachment": {
-                "id": 1,
+            "appointment_comment_attachment": {
+                "uuid": "6e5dcc2f-fdf0-56a2-913e-a1c2370719fc",
             },
         },
     },
