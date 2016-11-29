@@ -2,7 +2,7 @@
 
 var data = [
     {
-        "api": "/crmAms/appointmentAjax/add",
+        "api": "/crmAms/appointmentAjax/update",
         "method": "post",
         "headers": {
             'Accept': 'application/json',
@@ -10,6 +10,7 @@ var data = [
         },
         "data": {
             "appointment": {
+                "id":                       1,
                 "store_id":                 1,
                 "customer_id":              14680,
                 "consultant_user_id":       3,
@@ -21,7 +22,7 @@ var data = [
                 "check_status":             0,
                 "wedding_date":             "2016-06-01",
                 "schedule_order":           1,
-                "schedule_time_start":      "1000",
+                "schedule_time_start":      "1800",
                 "first_name":               "my first name",
                 "last_name":                "my last name",
                 "phone_number":             "1111111111",
@@ -29,7 +30,7 @@ var data = [
                 "customer_public_note":     "public message 1",
                 "apprx_size":               "20",
                 "how_many_guest":           "5",
-                "bride_name":               "美麗的新娘",
+                "bride_name":               "美麗的新娘 update at " + date('Y-m-d H:i:s (w)'),
                 "tuxedo_lead":              "1",
                 "try_on":                   "2",
             },
@@ -381,3 +382,4 @@ function date (format, timestamp)
 
   return _date(format, timestamp)
 }
+
