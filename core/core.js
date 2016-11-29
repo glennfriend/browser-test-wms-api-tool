@@ -154,6 +154,7 @@ function createApiCallFunc(json)
         // };
 
         this.open(url, {
+            encoding: "utf8",
             method: json.method,
             data: requestString,
             headers: json.headers
