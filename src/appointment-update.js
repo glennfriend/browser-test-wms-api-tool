@@ -35,7 +35,7 @@ var data = [
                 "try_on":                   "2",
             },
             "appointment_comment": {
-                "content": "I 💘 comment create at " + date('Y-m-d H:i:s (w)'),
+                "content": "comment create at " + date('Y-m-d H:i:s (w)'),
             },
             "appointment_comment_attachment": {
                 "uuid": "6e5dcc2f-fdf0-56a2-913e-a1c2370719fc",

@@ -1,3 +1,8 @@
+//
+// appointment comment 予許寫入 utf8mb4 的格式
+// 但是因為 appointment cancel log 未設定為 utf8mb4
+// 所以目前不建議使用這些擴充符號
+//
 
 var html = 'hello world <b>every body</b> go to <a href="https://google.com/">google</a>.';
 
@@ -34,14 +39,14 @@ var data = [
 module.exports = data;
 
 // --------------------------------------------------------------------------------
-//  
+//
 // --------------------------------------------------------------------------------
 /**
  *
  */
 function getRandomInt(min, max)
-{ 
-    return Math.floor(Math.random() * (max - min + 1)) + min; 
+{
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 /**
