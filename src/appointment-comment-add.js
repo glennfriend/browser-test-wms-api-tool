@@ -12,24 +12,29 @@ var data = [
         "method": "post",
         "headers": {
             'Accept': 'application/json',
-            'Content-type': 'application/json'
+            'Content-type': 'application/json',
         },
         "data": {
-            'appointment_id': '1',
-            'content': html + " " + getRandomInt(1, 9)
-        }
+            'appointment_comment': {
+                'appointment_id': '1',
+                'content': html + " " + getRandomInt(1, 9),
+            },
+        },
     },
     {
         "api": "/crmAms/appointmentCommentAjax/add",
         "method": "post",
         "headers": {
             'Accept': 'application/json',
-            'Content-type': 'application/json'
+            'Content-type': 'application/json',
         },
         "data": {
-            'appointment_id': '1',
-            'content': "hello " + getRandomInt(10, 100)
-        }
+            'appointment_comment': {
+                'appointment_id': '1',
+                'content': "這個迴響帶有一個附件",
+                'attachment_id': 1,
+            },
+        },
     }
 ]
 
