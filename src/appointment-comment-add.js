@@ -32,7 +32,7 @@ var data = [
             'appointment_comment': {
                 'appointment_id': '1',
                 'content': "這個迴響帶有一個附件",
-                'attachment_id': 1,
+                'attachment_uuid': '6e5dcc2f-fdf0-56a2-913e-a1c2370719fc',
             },
         },
     }
