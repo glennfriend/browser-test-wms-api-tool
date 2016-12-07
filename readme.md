@@ -22,10 +22,12 @@
     cd /usr/developer-tool/casperjs
     
     npm install phantomjs
+    chmod +x   /usr/developer-tool/casperjs/node_modules/phantomjs/bin/phantomjs
     sudo ln -s /usr/developer-tool/casperjs/node_modules/phantomjs/bin/phantomjs  /usr/bin/phantomjs
     phantomjs -v
 
     npm install casperjs
+    chmod +x   /usr/developer-tool/casperjs/node_modules/casperjs/bin/casperjs
     sudo ln -s /usr/developer-tool/casperjs/node_modules/casperjs/bin/casperjs  /usr/local/bin/casperjs
     casperjs --version
 
@@ -48,3 +50,8 @@ casperjs --ignore-ssl-errors=true ../core/core.js test.js
     --ignore-ssl-errors=true
         忽略 certificate 的問題
 
+####
+```sh
+如果是在虛擬機器上面, 記得新增 hosts 配合您設定 config.json 裡面的 "system.base_url"
+vi /etc/hosts
+```
