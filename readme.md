@@ -50,7 +50,7 @@ casperjs --ignore-ssl-errors=true ../core/core.js test.js
     --ignore-ssl-errors=true
         忽略 certificate 的問題
 
-####
+#### hosts
 ```sh
 如果是在虛擬機器上面, 記得新增 hosts 配合您設定 config.json 裡面的 "system.base_url"
 vi /etc/hosts
