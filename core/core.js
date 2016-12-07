@@ -5,7 +5,7 @@
 var isDebug = false;
 var isCaptureImage = false;
 var isSaveCookie = false;
-
+var ROOT = '/var/www/tool/browser-test-wms-api-tool';
 
 if (isDebug) {
     var casper = require('casper').create({
@@ -24,7 +24,7 @@ else {
 // ================================================================================
 //  start
 // ================================================================================
-phantom.injectJs('/var/www/browser-test-wms-api-tool/core/bootstrap.js'); // 必須使用絕對路徑
+phantom.injectJs(ROOT + '/core/bootstrap.js'); // 必須使用絕對路徑
 var URL = getConfig().system.base_url;
 
 if (!casper.cli.args || !casper.cli.args[0]) {
