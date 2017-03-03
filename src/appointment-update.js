@@ -33,6 +33,7 @@ var data = [
                 "bride_name":               "美麗的新娘 update at " + date('Y-m-d H:i:s (w)'),
                 "tuxedo_lead":              "1",
                 "try_on":                   "2",
+                "dress_budget":             "2",
             },
             "appointment_comment": {
                 "content": "comment create at " + date('Y-m-d H:i:s (w)'),
