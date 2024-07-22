@@ -1,3 +1,8 @@
+## 該程式已棄用 !
+- 不再使用 phantomjs & casperjs
+- 請轉用至 chrome headless 
+
+
 ### 前置作業
 ```
     確認版本
